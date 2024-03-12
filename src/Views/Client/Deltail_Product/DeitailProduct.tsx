@@ -4,13 +4,13 @@ import RenderListProducts from '../RenderListProducts/RenderListProducts';
 import { useContext, useEffect, useState } from 'react';
 import { contextProvider } from '../../../ContextProvide/DataProvider';
 import axios from 'axios';
+
 type Type_deitalproducts = {
     id: number,
     name: string,
     // image: string,
     price: number,
     title: string,
-
 }
 
 const DeitailProduct = () => {

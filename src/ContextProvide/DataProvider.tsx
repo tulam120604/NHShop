@@ -5,6 +5,8 @@ type objectContextProvider = {
     PageClient: object,
     DataProducts: object,
     ListProductsNew: object,
+    Carts: object,
+    AddToCart: unknown,
 }
 
 const contextProvider = createContext({} as objectContextProvider);
@@ -50,13 +52,18 @@ const DataProvider = ({ children }: { children: React.ReactNode }) => {
 
 
     // GIO HANG
-    // const [carts, setCart] = useState([]);
-
+    const [carts, setCart] = useState([]);
+    const add_to_cart = (product: object) => {
+        setCart([product, ...carts]);
+    }
 
     const all_Context_Provider: objectContextProvider = {
         PageClient: PageClient,
         DataProducts: dataProducts,
         ListProductsNew: listProductsNew,
+        Carts: carts,
+        AddToCart: add_to_cart,
+
     }
     return (<>
         <contextProvider.Provider value={all_Context_Provider}>

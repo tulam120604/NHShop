@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import '../../../Styles/Client/RenderListProducts/RenderListProducts.css';
+import { useContext } from 'react';
+import { contextProvider } from '../../../ContextProvide/DataProvider';
 type props_ListProductsNew = {
     ListProductsNew: object,
-}
-const RenderListProducts = ({ ListProductsNew }: props_ListProductsNew) => {
+};
 
+const RenderListProducts = ({ ListProductsNew }: props_ListProductsNew) => {
+    const { AddToCart } = useContext(contextProvider);
     return (<>
         <div className="Render_List_Products">
             <div className="box">
@@ -23,7 +26,7 @@ const RenderListProducts = ({ ListProductsNew }: props_ListProductsNew) => {
                             <div className="add_cart">
                                 <div className="block_add_cart">
                                     <Link to={`/shop/deital_product/${item.id}`}> <button>View  product</button></Link>
-                                    <Link to="/shoping_cart" ><button>Add to cart</button></Link>
+                                    <button className='btn_add_cart' onClick={() => AddToCart(item)}>Add to cart</button>
                                     <div className="operation">
                                         <div className="sections">
                                             <img src="../../src/assets/Images/share.png" alt='' />

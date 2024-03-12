@@ -142,12 +142,33 @@
                         }
                     }
 
+                    .btn_add_cart {
+                        width: 202px;
+                        height: 48px;
+                        background: #FFFFFF;
+                        border: none;
+                        color: #B88E2F;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        margin-bottom: 22px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
                     a:hover {
                         background: #dedcdc;
 
                         button {
                             background: none;
                         }
+                    }
+
+                    .btn_add_cart:hover {
+                        background: #dedcdc;
                     }
 
                     .operation {
