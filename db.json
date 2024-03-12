@@ -1,0 +1,88 @@
+{
+    "Page_Client": [
+        {
+            "name_Page": "home",
+            "path_url": "/"
+        },
+        {
+            "name_Page": "shop",
+            "path_url": "shop"
+        },
+        {
+            "name_Page": "about",
+            "path_url": "about"
+        },
+        {
+            "name_Page": "contact",
+            "path_url": "contact"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "San Pham 1",
+            "price": 500000,
+            "title": "Day la san pham 1"
+        },
+        {
+            "id": 2,
+            "name": "San Pham 2",
+            "price": 500000,
+            "title": "Day la san pham 2"
+        },
+        {
+            "id": 3,
+            "name": "San Pham 3",
+            "price": 500000,
+            "title": "Day la san pham 3"
+        },
+        {
+            "id": 4,
+            "name": "San Pham 4",
+            "price": 500000,
+            "title": "Day la san pham 4"
+        },
+        {
+            "id": 5,
+            "name": "San Pham 5",
+            "price": 500000,
+            "title": "Day la san pham 5"
+        },
+        {
+            "id": 6,
+            "name": "San Pham 6",
+            "price": 500000,
+            "title": "Day la san pham 6"
+        },
+        {
+            "id": 7,
+            "name": "San Pham 7",
+            "price": 500000,
+            "title": "Day la san pham 7"
+        },
+        {
+            "id": 8,
+            "name": "San Pham 8",
+            "price": 500000,
+            "title": "Day la san pham 8"
+        },
+        {
+            "id": 9,
+            "name": "San Pham 9",
+            "price": 500000,
+            "title": "Day la san pham 9"
+        },
+        {
+            "id": 10,
+            "name": "San Pham 10",
+            "price": 500000,
+            "title": "Day la san pham 10"
+        },
+        {
+            "id": 11,
+            "name": "San Pham 11",
+            "price": 500000,
+            "title": "Day la san pham 11"
+        }
+    ]
+}

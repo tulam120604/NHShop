@@ -1,0 +1,97 @@
+.Header_client {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    header {
+        display: flex;
+        width: 90%;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 185px;
+            display: flex;
+            height: 41px;
+
+            img {
+                height: 41px;
+            }
+
+            span {
+                height: 41px;
+                font-size: 3.7vh;
+                font-weight: 700;
+                text-transform: capitalize;
+                font-family: "Montserrat", sans-serif;
+            }
+        }
+
+        .menu {
+            width: auto;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                display: inline-block;
+                font-weight: 500;
+                text-transform: capitalize;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 1vh;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000000;
+                padding: 1vh 5vh;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+
+            a:hover {
+                background: #B88E2F;
+                color: aliceblue;
+            }
+
+            .activeNavLink {
+                background: #B88E2F;
+                color: aliceblue;
+            }
+        }
+
+        .options {
+            display: flex;
+            height: 41px;
+
+            a {
+                list-style: none;
+                height: 4.5vh;
+                margin-left: 3vh;
+                border-radius: 1vh;
+
+                img {
+                    width: 4.5vh;
+                    height: 100%;
+                    position: relative;
+                    padding: 0.7vh;
+                    border-radius: 1vh;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                img:hover {
+                    background: #B88E2F;
+                }
+            }
+
+            .activeNavLinkIconImg {
+                background: #B88E2F;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.Baner_Client {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .baner {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .ImageBaner {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+
+            span {
+                position: absolute;
+                font-size: 48px;
+                font-weight: 500;
+                line-height: 72px;
+                top: 136.08px;
+            }
+
+            img {
+                height: auto;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            p {
+                position: absolute;
+                top: 311.71px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                text-transform: capitalize;
+            }
+        }
+
+
+    }
+}

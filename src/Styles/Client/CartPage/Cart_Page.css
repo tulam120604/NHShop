@@ -1,0 +1,148 @@
+.Cart_Page {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid gray;
+    padding-bottom: 5vh;
+
+    .shopping_cart {
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5vh 0;
+
+        .shopping_cart_child {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 67% 30%;
+            justify-content: space-between;
+
+            .shopping_cart_child_left {
+                height: auto;
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+
+                    .space_thead_tbody {
+                        width: 100%;
+                        height: 65px;
+                        border: 1px solid red;
+                    }
+
+                    thead {
+                        width: 100%;
+                        height: 55px;
+                        background: #F9F1E7;
+                    }
+
+                    th,
+                    td {
+                        padding: 10px;
+                        text-align: left;
+
+                        .sluong {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 5px;
+                            border: 1px solid #898989;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    .dele_product {
+                        cursor: pointer;
+
+                        img {
+                            width: 28px;
+                            height: 28px;
+                            padding: 1px 3px;
+                        }
+                    }
+
+                    p {
+                        color: #9F9F9F;
+                    }
+
+                    img {
+                        width: 105px;
+                        height: 105px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+            .shopping_cart_child_right {
+                width: 100%;
+                background: #F9F1E7;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 50px;
+
+                .cart_totals {
+                    text-transform: capitalize;
+                    font-size: 32px;
+                    font-weight: 600;
+                    line-height: 48px;
+                    margin-top: 15px;
+                }
+
+                .fa_section_cart_totals {
+                    display: flex;
+                    width: 244px;
+                    height: 110px;
+                    justify-content: space-between;
+                    margin-top: 59px;
+
+                    .key_totals {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 16px;
+                        height: 100%;
+                        justify-content: space-between;
+                    }
+
+                    .value_totals {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 16px;
+                        height: 100%;
+                        justify-content: space-between;
+                        color: #9F9F9F;
+                        text-align: end;
+
+                        b {
+                            font-size: 20px;
+                            color: #B88E2F;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                button {
+                    width: 222px;
+                    height: 59px;
+                    border-radius: 15px;
+                    margin-top: 36px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    background: none;
+                    border: 1px solid;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

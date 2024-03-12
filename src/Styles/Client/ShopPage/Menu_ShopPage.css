@@ -1,0 +1,174 @@
+.Menu_Baner_ShopPage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .baner {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+
+        display: flex;
+        flex-direction: column;
+
+        .ImageBaner {
+            width: 100%;
+            height: 50vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /* navbar */
+        .navBar_baner_shop {
+            width: 100%;
+            height: 100px;
+            background: #F9F1E7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .navBar_baner_shop_child {
+                width: 90%;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                /* left */
+                .navBar_left {
+                    display: flex;
+                    width: 455px;
+                    height: 30px;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .filter_shop {
+                        display: flex;
+                        width: 85px;
+                        height: 100%;
+                        justify-content: space-between;
+
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        span {
+                            font-size: 20px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .grid_icon {
+                        width: 28px;
+                        height: 28px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .view_icon {
+                        width: 24px;
+                        height: 24px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .showing {
+                        width: 237px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                        border-left: 2px solid gray;
+
+                        span {
+                            width: 203px;
+                            height: 24px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                /* right */
+                .navBar_right {
+                    width: 450px;
+                    height: 55px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .show {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 126px;
+                        height: 55px;
+                        align-items: center;
+
+                        span {
+                            font-size: 20px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            line-height: 30px;
+                        }
+
+                        input {
+                            width: 55px;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            font-size: 20px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            line-height: 30px;
+                            color: #9F9F9F;
+                            text-align: center;
+                        }
+                    }
+
+                    .short_by {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 288px;
+                        height: 55px;
+                        align-items: center;
+
+                        span {
+                            font-size: 20px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            line-height: 30px;
+                        }
+
+                        input {
+                            width: 168px;
+                            height: 100%;
+                            border: none;
+                            outline: none;
+                            font-size: 20px;
+                            font-weight: 400;
+                            text-transform: capitalize;
+                            line-height: 30px;
+                            color: #9F9F9F;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
