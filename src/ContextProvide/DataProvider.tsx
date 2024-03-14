@@ -2,24 +2,28 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react"
 import Swal from 'sweetalert2';
 
+interface TypeState {
+    id: number,
+    name: string,
+    price: number,
+    title: string,
+    quantity?: number,
+}
 
 type objectContextProvider = {
     PageClient: Array<string | number | boolean>,
     DataProducts: Array<string | number | object>,
     ListProductsNew: object,
     Carts: object,
-    AddToCart: (item: object) => void,
-    Delete_Product_Cart: (item: object) => void,
+    AddToCart: (item: TypeState) => void,
+    Delete_Product_Cart: (item: TypeState) => void,
     Delete_All_Product_Cart: () => void,
+    ShowLogin: boolean,
+    HandleShowLogin: () => void,
+    HandleOverLayer: () => void,
 }
 
-interface TypeState {
-    id: number,
-    name: string,
-    price: number,
-    title: string,
-    quantity: number,
-}
+
 
 const contextProvider = createContext({} as objectContextProvider);
 const DataProvider = ({ children }: { children: React.ReactNode }) => {
@@ -64,7 +68,7 @@ const DataProvider = ({ children }: { children: React.ReactNode }) => {
 
 
     // GIO HANG
-    const [carts, setCart] = useState<TypeState>([]);
+    const [carts, setCart] = useState<TypeState[]>([]);
     const add_to_cart = (product: TypeState) => {
         const CheckSanPhamTrungnhau: boolean = Object.values(carts).some((a) => a.id === product.id);
         if (CheckSanPhamTrungnhau) {
@@ -77,7 +81,7 @@ const DataProvider = ({ children }: { children: React.ReactNode }) => {
         }
     }
 
-    const delete_product_cart = (product: object) => {
+    const delete_product_cart = (product: TypeState) => {
         setCart(carts.filter((item) => (item.id !== product.id)));
     }
 
@@ -103,6 +107,17 @@ const DataProvider = ({ children }: { children: React.ReactNode }) => {
     }
 
 
+    // LOGIN
+    const [showLogin, setShowLogin] = useState(false);
+    const handleShowLogin = () => {
+        setShowLogin(!showLogin)
+    };
+
+    const handleOverLayer = () => {
+        setShowLogin(!showLogin)
+    }
+
+
     // ----------------------------
 
     const all_Context_Provider: objectContextProvider = {
@@ -112,7 +127,10 @@ const DataProvider = ({ children }: { children: React.ReactNode }) => {
         Carts: carts,
         AddToCart: add_to_cart,
         Delete_Product_Cart: delete_product_cart,
-        Delete_All_Product_Cart: delete_all_product_cart
+        Delete_All_Product_Cart: delete_all_product_cart,
+        ShowLogin: showLogin,
+        HandleShowLogin: handleShowLogin,
+        HandleOverLayer: handleOverLayer,
     };
 
 

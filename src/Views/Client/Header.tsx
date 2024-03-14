@@ -6,9 +6,9 @@ interface TypeLink {
   name_Page: string,
   path_url: string,
 }
+
 const Header = () => {
-  const { PageClient } = useContext(contextProvider);
-  const { Carts } = useContext(contextProvider);
+  const { PageClient, Carts, HandleShowLogin } = useContext(contextProvider);
   const [showHeader, setShowHeader] = useState(false);
   useEffect(() => {
     const scroll = () => {
@@ -18,9 +18,9 @@ const Header = () => {
       else {
         setShowHeader(false)
       }
-    }
+    };
     window.addEventListener('scroll', scroll);
-  })
+  });
 
   return (<>
     <div className="header_client"></div>
@@ -43,8 +43,8 @@ const Header = () => {
         </div>
         {/* options */}
         <div className="options">
-          <NavLink className={({ isActive }) => isActive ? 'activeNavLinkIconImg' : ''} to={'account'}><img src="../src/assets/Images/account.png" alt='image' /></NavLink>
-          <NavLink className={({ isActive }) => isActive ? 'activeNavLinkIconImg' : ''} to={'search'}><img src="../src/assets/Images/search.png" alt='image' /></NavLink>
+          <button onClick={HandleShowLogin}><img src="../src/assets/Images/account.png" alt='image' /></button>
+          <button><img src="../src/assets/Images/search.png" alt='image' /></button>
           <NavLink className={({ isActive }) => isActive ? 'activeNavLinkIconImg' : ''} to={'heart'}><img src="../src/assets/Images/heart.png" alt='image' /> </NavLink>
           <NavLink className={({ isActive }) => isActive ? 'activeNavLinkIconImg' : ''} to={'shoping_cart'}>
             <img src="../src/assets/Images/shopping-cart.png" alt='image' />
@@ -52,7 +52,6 @@ const Header = () => {
           </NavLink>
         </div>
       </header>
-
     </div>
   </>)
 }

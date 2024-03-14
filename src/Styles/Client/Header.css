@@ -94,7 +94,6 @@
             margin: 0.5vh 3.1vh 0 0;
 
             a {
-                list-style: none;
                 height: 4.5vh;
                 margin-left: 4.5vh;
                 border-radius: 1vh;
@@ -126,9 +125,31 @@
                 }
             }
 
-            a:first-child {
+            button {
+                height: 4.5vh;
+                margin-left: 4.5vh;
+                border-radius: 1vh;
+                transition: 0.3s;
+                position: relative;
+
+                img {
+                    width: 4.5vh;
+                    height: 100%;
+                    position: relative;
+                    padding: 0.7vh;
+                    border-radius: 1vh;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+            }
+
+            button:first-child {
                 margin-left: 0;
                 margin-right: -0.3vh;
+            }
+
+            button:hover {
+                background: whitesmoke;
             }
 
             .activeNavLinkIconImg {
