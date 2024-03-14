@@ -8,7 +8,7 @@
         width: 90%;
         height: auto;
         display: grid;
-        grid-template-columns: 24% 24% 24% 24%;
+        grid-template-columns: 23.2% 23.2% 23.2% 23.2%;
         justify-content: space-between;
         margin-bottom: 100px;
 
@@ -37,8 +37,8 @@
                 color: #FFFFFF;
                 justify-content: end;
                 padding-right: 2px;
-                top: 2vh;
-                left: 80%;
+                top: 2.8vh;
+                left: 75%;
             }
 
             .newItem_sale {
@@ -60,7 +60,7 @@
             }
 
             .properties {
-                width: 224px;
+                width: 90%;
                 height: 99px;
                 position: relative;
                 top: 14px;
@@ -77,6 +77,7 @@
                     line-height: 24px;
                     color: #898989;
                     font-weight: 500;
+                    margin-top: 1.4vh;
                 }
 
                 b {
@@ -88,6 +89,7 @@
                     justify-content: space-between;
                     align-items: center;
                     height: 30px;
+                    margin-top: 0.85vh;
 
                     del {
                         font-size: 16px;

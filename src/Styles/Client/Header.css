@@ -1,56 +1,80 @@
-.Header_client {
+.header_client {
     width: 100%;
+    height: 12vh;
+    z-index: -1;
+}
+
+.Header_client {
+    width: 1440px;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: 0.3s;
+    align-items: center;
 
     header {
         display: flex;
-        width: 90%;
-        height: 100px;
+        width: 157vh;
+        height: 5.1vh;
         justify-content: space-between;
-        align-items: center;
 
         .logo {
             width: 185px;
+            height: 100%;
+            margin: -0.7vh 0 0 1.4vh;
             display: flex;
-            height: 41px;
 
-            img {
-                height: 41px;
+
+            a {
+                width: 100%;
+                height: 100%;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 0.6vh;
+                }
+
+                span {
+                    height: 41px;
+                    font-size: 3.7vh;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    font-family: "Montserrat", sans-serif;
+                    letter-spacing: 0.18vh;
+                }
             }
 
-            span {
-                height: 41px;
-                font-size: 3.7vh;
-                font-weight: 700;
-                text-transform: capitalize;
-                font-family: "Montserrat", sans-serif;
-            }
+
         }
 
         .menu {
-            width: auto;
-            height: 100%;
+            width: 58vh;
+            height: 3.7vh;
             display: flex;
             justify-content: space-between;
+            margin: 0.2vh 0 0 7.1vh;
 
             li {
                 display: inline-block;
-                font-weight: 500;
+                font-weight: 400;
                 text-transform: capitalize;
                 height: 100%;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                margin: 0 1vh;
+                margin: 0 0.7vh;
             }
 
             a {
                 text-decoration: none;
                 color: #000000;
-                padding: 1vh 5vh;
+                padding: 0.5vh 3vh;
                 border-radius: 5px;
                 transition: 0.3s;
+                font-size: 2.5vh;
             }
 
             a:hover {
@@ -66,13 +90,15 @@
 
         .options {
             display: flex;
-            height: 41px;
+            height: auto;
+            margin: 0.5vh 3.1vh 0 0;
 
             a {
                 list-style: none;
                 height: 4.5vh;
-                margin-left: 3vh;
+                margin-left: 4.5vh;
                 border-radius: 1vh;
+                position: relative;
 
                 img {
                     width: 4.5vh;
@@ -85,12 +111,28 @@
                 }
 
                 img:hover {
-                    background: #B88E2F;
+                    background: whitesmoke;
+                }
+
+                .quantity_cart {
+                    font-size: 2vh;
+                    position: absolute;
+                    top: 0;
+                    right: -50%;
+                    font-weight: 500;
+                    background: whitesmoke;
+                    padding: 0 1vh;
+                    border-radius: 40%;
                 }
             }
 
+            a:first-child {
+                margin-left: 0;
+                margin-right: -0.3vh;
+            }
+
             .activeNavLinkIconImg {
-                background: #B88E2F;
+                background: whitesmoke;
             }
         }
     }

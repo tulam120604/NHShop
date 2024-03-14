@@ -25,6 +25,9 @@ function App() {
             {/* DEITAL PRODUCT */}
             <Route path='shop/deital_product/:id' element={<DeitailProduct />} />
 
+            <Route path='about' element={<h2>About Page</h2>} />
+            <Route path='contact' element={<h2>Contact Page</h2>} />
+
             {/* SHOPING CART */}
             <Route path='shoping_cart' element={<Cart_Page />} />
 

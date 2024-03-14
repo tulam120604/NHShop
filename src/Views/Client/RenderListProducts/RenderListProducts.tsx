@@ -3,15 +3,22 @@ import '../../../Styles/Client/RenderListProducts/RenderListProducts.css';
 import { useContext } from 'react';
 import { contextProvider } from '../../../ContextProvide/DataProvider';
 type props_ListProductsNew = {
-    ListProductsNew: object,
+    ListProductsNew: Array<TypeObject>,
 };
+interface TypeObject {
+    id: number,
+    name: string,
+    price: number,
+    title: string,
+}
 
 const RenderListProducts = ({ ListProductsNew }: props_ListProductsNew) => {
     const { AddToCart } = useContext(contextProvider);
+
     return (<>
         <div className="Render_List_Products">
             <div className="box">
-                {Object.values(ListProductsNew)?.map((item) => {
+                {ListProductsNew?.map((item: TypeObject) => {
                     return (<>
                         <div className="item">
                             <div className="img_item">

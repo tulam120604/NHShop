@@ -1,12 +1,24 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react"
+import Swal from 'sweetalert2';
+
 
 type objectContextProvider = {
-    PageClient: object,
-    DataProducts: object,
+    PageClient: Array<string | number | boolean>,
+    DataProducts: Array<string | number | object>,
     ListProductsNew: object,
     Carts: object,
-    AddToCart: unknown,
+    AddToCart: (item: object) => void,
+    Delete_Product_Cart: (item: object) => void,
+    Delete_All_Product_Cart: () => void,
+}
+
+interface TypeState {
+    id: number,
+    name: string,
+    price: number,
+    title: string,
+    quantity: number,
 }
 
 const contextProvider = createContext({} as objectContextProvider);
@@ -52,10 +64,46 @@ const DataProvider = ({ children }: { children: React.ReactNode }) => {
 
 
     // GIO HANG
-    const [carts, setCart] = useState([]);
-    const add_to_cart = (product: object) => {
-        setCart([product, ...carts]);
+    const [carts, setCart] = useState<TypeState>([]);
+    const add_to_cart = (product: TypeState) => {
+        const CheckSanPhamTrungnhau: boolean = Object.values(carts).some((a) => a.id === product.id);
+        if (CheckSanPhamTrungnhau) {
+            setCart((carts) => Object.values(carts).map((item) => item.id === product.id ?
+                { ...item, quantity: item.quantity + 1 } : item
+            ))
+        }
+        else {
+            setCart([{ ...product, quantity: 1 }, ...carts]);
+        }
     }
+
+    const delete_product_cart = (product: object) => {
+        setCart(carts.filter((item) => (item.id !== product.id)));
+    }
+
+    // XÓA TẤT CẢ SẢN PHẨM TRONG GIỎ
+    const delete_all_product_cart = () => {
+        Swal.fire({
+            title: "Chắc chắn xóa hết sản phẩm trong giỏ hàng ?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Xác nhận!",
+            cancelButtonText: "Hủy!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Xóa thành công!",
+                    icon: "success"
+                });
+                setCart(Object.values(carts).slice(0, 0))
+            }
+        });
+    }
+
+
+    // ----------------------------
 
     const all_Context_Provider: objectContextProvider = {
         PageClient: PageClient,
@@ -63,8 +111,11 @@ const DataProvider = ({ children }: { children: React.ReactNode }) => {
         ListProductsNew: listProductsNew,
         Carts: carts,
         AddToCart: add_to_cart,
+        Delete_Product_Cart: delete_product_cart,
+        Delete_All_Product_Cart: delete_all_product_cart
+    };
 
-    }
+
     return (<>
         <contextProvider.Provider value={all_Context_Provider}>
             {children}
