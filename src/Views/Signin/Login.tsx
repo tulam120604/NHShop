@@ -28,7 +28,7 @@ const Login = () => {
                 <button>facebook</button>
                 <button>google</button>
             </div>
-            <Link onClick={HandleOverLayer} to={'/sign_up'}>Create account</Link>
+            <Link onClick={HandleOverLayer} to={'/sign_up'}>Create account &#10140;</Link>
         </div>
     </>)
 }

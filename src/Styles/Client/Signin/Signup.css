@@ -24,6 +24,7 @@
     }
 
     form {
+        height: auto;
 
         .use_name,
         .password {
@@ -48,19 +49,21 @@
                 padding: 0 2.5% 0;
             }
         }
+
+        .btn-login {
+            width: auto;
+            height: 64px;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            background: #F9F1E7;
+            transition: 0.3s;
+            margin-top: 30px;
+            padding: 0 5vh;
+        }
     }
 
-    .btn-login {
-        width: auto;
-        height: 64px;
-        border-radius: 15px;
-        font-size: 20px;
-        font-weight: 700;
-        background: #F9F1E7;
-        transition: 0.3s;
-        margin-top: 30px;
-        padding: 0 5vh;
-    }
+
 
     .login_equal_goole {
         width: 512px;
