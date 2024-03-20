@@ -6,7 +6,7 @@
     .new {
         display: flex;
         justify-content: center;
-        width: 86%;
+        width: 72.8%;
         height: auto;
         align-items: center;
 
@@ -41,6 +41,50 @@
                 width: 100%;
                 background: gray;
                 margin-top: 8.3vh;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .New_Home {
+        width: 100%;
+        margin-top: -350px;
+
+        .new {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            height: 745px;
+            font-family: "Poppins", sans-serif;
+
+            .block_new {
+                width: 100%;
+                margin-top: 10px;
+
+                span {
+                    width: 119px;
+                    height: 51px;
+                    font-size: 25px;
+                    line-height: 60px;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                }
+
+                h6 {
+                    height: 1px;
+                    width: 100%;
+                    background: gray;
+                    margin-top: 10px;
+                }
+
+                h5 {
+                    height: 1px;
+                    width: 100%;
+                    background: gray;
+                    margin-top: 41px;
+                }
             }
         }
     }

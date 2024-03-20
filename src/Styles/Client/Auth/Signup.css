@@ -1,49 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-.Sign_In {
-    width: 800px;
-    height: 600px;
-    position: absolute;
-    position: fixed;
-    z-index: 2;
-    transform: translateY(-200%);
-    transition: 0.3s;
+.Sign_up {
+    width: 100%;
+    height: auto;
     display: flex;
-    align-items: center;
-    top: 10%;
-    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5vh;
 }
 
-.Sign_In_Child {
+.Sign_up_Child {
     width: 800px;
-    height: 600px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: white;
-    transition: 0.3s;
     z-index: 1;
-
-    .close {
-        width: 100%;
-        display: flex;
-        justify-content: end;
-        cursor: pointer;
-
-        img {
-            width: 25px;
-            height: 25px;
-            position: relative;
-            top: 23px;
-            right: 24px;
-            transition: 0.3s;
-        }
-
-        img:hover {
-            scale: 1.05;
-        }
-    }
 
     span {
         font-size: 30px;
@@ -53,6 +24,10 @@
     }
 
     form {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .use_name,
         .password {
@@ -74,21 +49,29 @@
                 border: 1px solid black;
                 border-radius: 15px;
                 color: black;
+                outline: none;
                 padding: 0 2.5% 0;
             }
         }
+
+        .btn-login {
+            width: auto;
+            height: 64px;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            background: #F9F1E7;
+            transition: 0.3s;
+            margin-top: 30px;
+            padding: 0 5vh;
+        }
+
+        p {
+            color: red;
+        }
     }
 
-    .btn-login {
-        width: 149px;
-        height: 64px;
-        border-radius: 15px;
-        font-size: 20px;
-        font-weight: 700;
-        background: #F9F1E7;
-        transition: 0.3s;
-        margin-top: 30px;
-    }
+
 
     .login_equal_goole {
         width: 512px;

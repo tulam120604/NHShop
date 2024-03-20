@@ -17,7 +17,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 63vh;
+            height: 100%;
+
 
             span {
                 position: absolute;
@@ -40,6 +41,51 @@
                 font-size: 16px;
                 line-height: 24px;
                 text-transform: capitalize;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .Baner_Client {
+        width: 100%;
+
+        .baner {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            font-family: "Poppins", sans-serif;
+
+            .ImageBaner {
+
+                span {
+                    /* position: absolute; */
+                    width: auto;
+                    white-space: nowrap;
+                    height: 39.92px;
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 72px;
+                    top: 40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                p {
+                    position: absolute;
+                    top: 90px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 24px;
+                    text-transform: capitalize;
+                }
             }
         }
     }

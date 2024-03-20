@@ -17,7 +17,22 @@
       "path_url": "contact"
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "email": "admin@admin.xyz",
+      "password": "$2a$10$YG8G42U7h/nUC7K2spd7K.bHzBsi/mvWBCLDq1dBkhH81vmAygv0G",
+      "username": "admin",
+      "confirm_password": "123456",
+      "id": 1
+    },
+    {
+      "email": "123@abc.xyz",
+      "password": "$2a$10$mlqzh4G6pHpVOwTQgFIwW.rpuHdOKHAGrH1XdmxkHGZv3rnAKS3ga",
+      "username": "member1",
+      "confirm_password": "123456",
+      "id": 2
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -89,7 +104,7 @@
       "id": 12,
       "name": "San Pham 12",
       "price": 500000,
-      "title": "Day la san pham 12"
+      "title": "Day la san pham 12 243"
     }
   ]
 }

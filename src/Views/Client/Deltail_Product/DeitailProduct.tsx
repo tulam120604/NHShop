@@ -106,8 +106,8 @@ const DeitailProduct = () => {
                                         <div className="quality_positive">1</div>
                                         <button className="up">+</button>
                                     </section>
-                                    <Link to={"/shoping_cart"} ><button>Add to cart</button></Link>
-                                    <button>+ compare</button>
+                                    <Link className='btn-addCart' to={"/shoping_cart"} >Add to cart</Link>
+                                    <button className='btn_compare'>+ compare</button>
                                 </div>
                             </div>
                             {/* row address deital product */}

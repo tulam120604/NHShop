@@ -6,13 +6,19 @@ import Index_ShopPage from './Views/Client/ShopPage/Index_ShopPage';
 import Cart_Page from './Views/Client/CartPage/Cart_Page';
 import Pay_Page from './Views/Client/PayPage/Pay_Page';
 import DeitailProduct from './Views/Client/Deltail_Product/DeitailProduct';
-import Login from './Views/Signin/Login';
+import Login from './Views/Auth/Login';
 import { useContext } from 'react';
 import { contextProvider } from './ContextProvide/DataProvider';
-import Sign_Up from './Views/Signin/Sign_up';
+import Sign_Up from './Views/Auth/Sign_up';
+import Account_setting from './Views/Auth/Account_setting';
+import Adminstration from './Views/Adminstration';
+import Setting_Products from './Views/Adminstration/Setting_Products';
+import Add_Product from './Views/Adminstration/Add_Product';
+import Edit_Product from './Views/Adminstration/Edit_Product';
 
 function App() {
-  const { ShowLogin, HandleOverLayer } = useContext(contextProvider);
+  const { ShowLogin, HandleOverLayer, ShowSetting_Account } = useContext(contextProvider);
+  const checkUserLocaStorage = localStorage.getItem('account');
 
   return (
     <>
@@ -41,15 +47,28 @@ function App() {
 
             {/* SIGN IN */}
             <Route path='sign_up' element={<Sign_Up />} />
+
           </Route>
 
           {/* ADMIN */}
+          <Route path='/adminstration' element={<Adminstration />}>
+            <Route index element={<Setting_Products />} />
+            <Route path='add-product' element={<Add_Product />} />
+            <Route path=':id/edit-product' element={<Edit_Product />} />
+            {/* <Route index element={<Setting_Products />} /> */}
+          </Route>
         </Routes>
+
+        {/* ----- */}
       </div>
-      <div onClick={HandleOverLayer} style={{ display: ShowLogin ? 'block' : 'none' }} className="overlayer"></div>
+      <div onClick={HandleOverLayer} style={{ display: ShowLogin || ShowSetting_Account ? 'block' : 'none' }} className="overlayer"></div>
       <div style={{ transform: ShowLogin ? 'translateY(0)' : '' }} className="Sign_In">
         <Login />
       </div>
+      {checkUserLocaStorage !== null ?
+        <div style={{ transform: ShowSetting_Account ? 'translateY(0)' : '' }} className="Show_settingAccount">
+          <Account_setting />
+        </div> : ''}
     </>
   )
 }

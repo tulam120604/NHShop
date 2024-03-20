@@ -5,7 +5,7 @@
     margin-top: -0.3vh;
 
     .shop {
-        width: 86.3%;
+        width: 72.8%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -50,4 +50,62 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 700px) {
+    .Shop_Home {
+        width: 100%;
+
+        .shop {
+            width: 90%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin-top: -100px;
+
+            .block_shop {
+                width: 100%;
+                height: 100%;
+                font-family: "Poppins", sans-serif;
+
+                span {
+                    width: 119px;
+                    height: 51px;
+                    font-size: 25px;
+                    line-height: 60px;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                }
+
+                h6 {
+                    height: 1px;
+                    width: 100%;
+                    background: gray;
+                    margin-top: 10px;
+                }
+
+                .image_shop {
+                    width: 100%;
+                    height: auto;
+                    display: grid;
+                    grid-template-columns: 48.5% 48.5%;
+                    justify-content: space-between;
+                    margin-top: 25px;
+                    row-gap: 10px;
+                    column-gap: 0;
+
+                    .item_shop {
+                        width: 100%;
+                        height: 157px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -4,12 +4,13 @@ import App from './App.tsx';
 import './index.css';
 import { DataProvider } from './ContextProvide/DataProvider.tsx';
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   // <React.StrictMode>
-  <DataProvider>
-    <Browser>
+  <Browser>
+    <DataProvider>
       <App />
-    </Browser>
-  </DataProvider>
+    </DataProvider>
+  </Browser>
   // </React.StrictMode>,
 )

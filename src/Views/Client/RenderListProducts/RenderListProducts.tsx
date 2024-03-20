@@ -32,7 +32,7 @@ const RenderListProducts = ({ ListProductsNew }: props_ListProductsNew) => {
                             </div>
                             <div className="add_cart">
                                 <div className="block_add_cart">
-                                    <Link to={`/shop/deital_product/${item.id}`}> <button>View  product</button></Link>
+                                    <Link to={`/shop/deital_product/${item.id}`}>View  product</Link>
                                     <button className='btn_add_cart' onClick={() => AddToCart(item)}>Add to cart</button>
                                     <div className="operation">
                                         <div className="sections">
@@ -43,7 +43,7 @@ const RenderListProducts = ({ ListProductsNew }: props_ListProductsNew) => {
                                             <img src="../../src/assets/Images/compare.png" alt='' />
                                             <span>compare</span>
                                         </div>
-                                        <div className="sections">
+                                        <div className="sections likeIcon">
                                             <img src="../../src/assets/Images/heart.png" alt='' />
                                             <span>like</span>
                                         </div>

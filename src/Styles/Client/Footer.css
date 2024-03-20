@@ -12,7 +12,7 @@
         padding-top: 1vh;
 
         .block_footer {
-            width: 90%;
+            width: 76%;
             height: 419px;
             display: flex;
             flex-direction: column;
@@ -145,6 +145,176 @@
                 border-top: 2px solid gray;
                 display: flex;
                 align-items: end;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .Footer_client {
+        width: 100%;
+
+        footer {
+            width: 90%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            border-top: 1px solid #898989;
+
+            .block_footer {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                margin-top: 25px;
+
+                li {
+                    list-style: none;
+                    text-transform: capitalize;
+                    font-size: 12px;
+
+                    a {
+                        text-decoration: none;
+                        color: #000000;
+                    }
+                }
+
+                .box_footer {
+                    width: auto;
+                    display: grid;
+                    justify-content: space-between;
+                    grid-template-columns: 50% 50%;
+                    grid-auto-columns: 2;
+
+                    .colum_footer {
+                        transform: translate(-25px, -12%);
+
+                        span {
+                            font-size: 16px;
+                            font-weight: 700;
+                            line-height: 36px;
+                        }
+
+                        p {
+                            width: 80%;
+                            margin-top: 25px;
+                            color: #9F9F9F;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .contact_footer {
+                        width: auto;
+                        height: auto;
+                        transform: translate(25px, -13px);
+
+                        p {
+                            color: #9F9F9F;
+                            text-transform: capitalize;
+                            transform: translateX(50px);
+                        }
+
+                        section {
+                            display: grid;
+                            grid-template-columns: 50% 50%;
+                            column-gap: 60px;
+                            row-gap: 20px;
+                            width: 66px;
+                            height: auto;
+                            margin-top: 25px;
+                            justify-content: space-between;
+                            transform: translateY(10px);
+                        }
+                    }
+
+                    .help_footer {
+                        width: 100%;
+                        height: auto;
+                        transform: translate(0px, 10%);
+                        padding-top: 10px;
+
+                        p {
+                            color: #9F9F9F;
+                            text-transform: capitalize;
+                            transform: translateY(-12px);
+                        }
+
+                        section {
+                            display: grid;
+                            grid-template-columns: 100%;
+                            column-gap: 60px;
+                            row-gap: 20px;
+                            width: 100%;
+                            height: auto;
+                            margin-top: 5px;
+                            justify-content: space-between;
+                        }
+                    }
+
+                    .newsletter_footer {
+                        transform: translate(0px, 10%);
+                        padding-top: 10px;
+
+                        p {
+                            color: #9F9F9F;
+                            text-transform: capitalize;
+                            transform: translateY(-10px);
+                        }
+
+                        .contact {
+                            display: grid;
+                            grid-template-columns: 100%;
+                            width: 100%;
+                            height: 24px;
+                            justify-content: space-between;
+                            margin-top: -10px;
+
+                            input {
+                                border-top: none;
+                                border-left: none;
+                                border-right: none;
+                                border-bottom: 2px solid gray;
+                                outline: none;
+                                font-size: 14px;
+                                font-family: "Poppins", sans-serif;
+                                font-weight: 400;
+                                width: 97%;
+                            }
+
+                            button {
+                                margin-top: 10px;
+                                width: 30%;
+                                height: auto;
+                                border-top: none;
+                                border-left: none;
+                                border-right: none;
+                                background: none;
+                                text-align: center;
+                                border-bottom: 2px solid gray;
+                                color: #000000;
+                                font-size: 12px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                                font-family: "Poppins", sans-serif;
+                                height: 100%;
+                                line-height: 21px;
+                            }
+                        }
+                    }
+                }
+
+                .copyright {
+                    width: 100%;
+                    height: 59px;
+                    border-top: 2px solid gray;
+                    display: flex;
+                    font-size: 14px;
+                    align-items: center;
+                    transform: translateY(0px);
+                    margin-top: 10px;
+                }
             }
         }
     }
